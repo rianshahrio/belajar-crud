@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Mahasiswa</title>
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/auth.js"></script>
+</head>
+
+<body class="bg-light">
+
+    <div class="container py-5">
+
+        <!-- Header -->
+        <div class="mb-4 d-flex justify-content-between align-items-start">
+            <div>
+                <h3 class="fw-bold mb-1">CRUD Data Mahasiswa</h3>
+                <p class="text-secondary mb-0">Kelola data mahasiswa dengan mudah.</p>
+            </div>
+            <button class="btn btn-outline-danger btn-sm" id="btnLogout">Logout</button>
+        </div>
+
+        <!-- Form Tambah -->
+        <div class="card border-0 shadow-sm mb-4">
+            <div class="card-body p-4">
+
+                <h5 class="fw-semibold mb-3">Tambah Mahasiswa</h5>
+
+                <form id="formMahasiswa">
+
+                    <div class="row g-3">
+
+                        <div class="col-md-4">
+                            <label class="form-label">Nama</label>
+                            <input type="text" id="nama" class="form-control" placeholder="Masukkan nama" required>
+                        </div>
+
+                        <div class="col-md-4">
+                            <label class="form-label">Jurusan</label>
+                            <input type="text" id="jurusan" class="form-control" placeholder="Masukkan jurusan"
+                                required>
+                        </div>
+
+                        <div class="col-md-4">
+                            <label class="form-label">Umur</label>
+                            <input type="number" id="umur" class="form-control" placeholder="Masukkan umur" min="1"
+                                required>
+                        </div>
+
+                        <div class="col-md-4">
+                            <label class="form-label">Alamat</label>
+                            <input type="text" id="alamat" class="form-control" placeholder="Masukkan alamat" required>
+                        </div>
+
+                        <div class="col-md-4">
+                            <label class="form-label">Ijazah</label>
+                            <input type="file" id="ijazah" class="form-control" required>
+                            <div id="ijazahInfo" class="form-text"></div>
+                        </div>
+
+                    </div>
+
+                    <div class="mt-3">
+                        <button type="submit" class="btn btn-primary" id="btnSimpan">
+                            + Tambah Data
+                        </button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
+        <!-- Tabel Data -->
+        <div class="card border-0 shadow-sm">
+
+            <div class="card-body p-4">
+
+                <h5 class="fw-semibold mb-3">Daftar Mahasiswa</h5>
+
+                <input type="text" id="cari" class="form-control mb-3" placeholder="Cari nama atau jurusan...">
+
+                <div class="table-responsive">
+
+                    <table class="table table-bordered table-hover align-middle mb-0">
+
+                        <thead class="table-light">
+                            <tr>
+                                <th width="60">No</th>
+                                <th>Nama</th>
+                                <th>Jurusan</th>
+                                <th>Umur</th>
+                                <th>Alamat</th>
+                                <th>Ijazah</th>
+                                <th width="150">Aksi</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="dataMahasiswa">
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
