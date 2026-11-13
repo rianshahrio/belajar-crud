@@ -4,6 +4,8 @@ const PORT = 3000;
 
 // Lets the server read JSON sent from the browser
 app.use(express.json());
+const cors = require("cors");
+app.use(cors());
 
 // Data lives in memory for now (it resets when the server restarts)
 let mahasiswa = [];
